@@ -15,12 +15,12 @@ var orm = {
 
 
 //---------------------------------------------------------------------------------------------------------
-// ASK TA how to properly test.... I feel like these are very close but will receive error codes... 
+// ASK TA how to properly test.... I feel like these are very close but I will receive errors 
 //---------------------------------------------------------------------------------------------------------
     // insertOne : function (burger_name, devoured){
-    //     var queryString = "INSERT INTO burgers";
+    //     var queryString = "INSERT INTO burgers ";
     //     console.log("This is adding new burgers to DB")
-    //     return connection.query(querystring, [burger_name,devoured], function(err,res) {
+    //     return connection.query(querystring, [burger_name, devoured], function(err,res) {
     //         if (err) throw err;
     //         // insertOne(res);
     //         console.log(insertOne(res))
@@ -28,9 +28,9 @@ var orm = {
     // )},
 
     // updateOne : function() {
-    //     var queryString = "UPDATE burgers SET ?? WHERE ?? = ?";
-    //     console.log("This is updating a existing burger from DB");
-    //     return connection.query(queryString, [burger_name, burgers], function (err, res){
+    //     var queryString = "UPDATE burgers SET burger_name = ? WHERE id = ?";
+    //     console.log("This is updating a existing burger in DB");
+    //     return connection.query(queryString, [burger_name, i++], function (err, res){
     //         if (err) throw err;
     //         updateOne (res);
     //     })
