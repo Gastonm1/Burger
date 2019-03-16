@@ -28,5 +28,15 @@ $(function() {
             devour: $("[name=devour]:checked").val().trim()
         };
 
-        
-})
+        $.ajax("/api/burgers",{
+            type: "POST",
+            data: newBurger
+        }).then(
+            function(){
+                console.log("created new burger");
+                //Reload
+                location.reload();
+            }
+        );
+});
+});
