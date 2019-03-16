@@ -13,19 +13,10 @@ var secret = fs.readFile("Pass.txt","utf8", function(error, data) {
 
 var connection = mysql.createConnection({
   host: "localhost",
-  port: 1021,
+  port: 3306,
   user: "root",
-  password: secret,
-  database: "burgers_db"
-});
-
-// Make the connection
-connection.connect(function(err) {
-  if (err) {
-    console.log("error connection " + err.stack);
-    return;
-  }
-  console.log("connected as id " + connection.threadId);
+  password: "Musketeers33!",
+  database: "burger_db"
 });
 
 
