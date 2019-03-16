@@ -42,7 +42,7 @@ var orm = {
       if (err) {
         throw err;
       }       
-      cb(res);
+      cb(res); 
     });
   },
 
