@@ -41,7 +41,7 @@ var orm = {
     connection.query(queryString, function(err, res) {
       if (err) {
         throw err;
-      }
+      }       
       cb(res);
     });
   },
