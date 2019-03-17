@@ -1,5 +1,5 @@
 var express = require("express");
-var connection = require("./db/config/connection");
+var connection = require("./config/connection");
 
 // Make connection
 connection.connect(function(err) {
