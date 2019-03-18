@@ -1,6 +1,6 @@
 var express = require("express");
 var connection = require("./config/connection");
-var path = require("path")
+var path = require("path");
 
 // Make connection
 connection.connect(function(err) {
