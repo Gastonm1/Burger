@@ -12,7 +12,7 @@ $(function() {
             data: newBurgerState
         }).then(
             function() {
-                console.log("Are you hungry?",newBurgerState);
+                console.log("Are you hungry?", newBurgerState);
                 //Reload
                 location.reload();
             }
@@ -22,11 +22,12 @@ $(function() {
     $(".create-form").on("submit", function(event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
-
+        console.log($("#bName").val())
         var newBurger = {
-            name: $("#devour").val().trim(),
-            devour: $("[name=devour]:checked").val().trim()
+            name: $("#bName").val().trim(),
+            devoured: $("#radioBtn").val()
         };
+        console.log(newBurger)
 
         $.ajax("/api/burgers",{
             type: "POST",

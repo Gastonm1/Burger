@@ -16,10 +16,12 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function(req, res) {
+  console.log("YOOOOOOOO")
+  console.log(req.body.name)
   burgers.insertOne(
     ["burger_name", "devoured"],
-    [req.body.burger_name, req.body.devoured],
-    function(res) {
+    [req.body.name, req.body.devoured],
+    function() {
       res.json({ id: res.insertId });
     }
   );

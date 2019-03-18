@@ -1,5 +1,6 @@
 var express = require("express");
 var connection = require("./config/connection");
+var path = require("path")
 
 // Make connection
 connection.connect(function(err) {
@@ -14,7 +15,8 @@ var PORT = process.env.PORT || 1021;
 
 var app = express();
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname + "/public"))); 
+console.log(path.normalize(__dirname + "/public/assets"))
 
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
